@@ -71,7 +71,7 @@ namespace TrenBiletUygulamasi
             Bilet bilet = new Bilet(koltukSayisi, isim, guzergah);
             BiletSat(bilet, indirim, koltukSayisi);
 
-            string biletSatisi = $"Isim: {bilet.YolcuAdi} \nGuzergah: {bilet.Guzergah} \nToplam Ucret: {bilet.ToplamUcret}";
+            string biletSatisi = $"Isim: {bilet.YolcuAdi} \nGuzergah: {bilet.Guzergah.Guzergah} \nToplam Ucret: {bilet.ToplamUcret}";
             ciro += bilet.ToplamUcret;
             Satilan_Biletler.Items.Add(biletSatisi);
         }
@@ -127,5 +127,3 @@ namespace TrenBiletUygulamasi
         public string Guzergah { get; set; }
         public int Koltuksayisi{ get; set; }
     }
-
-
